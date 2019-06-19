@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="igu.FXMLfilmesController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="searchMovieTab" closable="false" text="Search for new movie">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="searchMovieTitleTextField" layoutX="124.0" layoutY="55.0" prefHeight="25.0" prefWidth="436.0" promptText="Movie title" />
+                        <TextField fx:id="searchProductionYearTextField" layoutX="124.0" layoutY="110.0" prefHeight="25.0" prefWidth="116.0" promptText="Production year" />
+                        <Label layoutX="57.0" layoutY="59.0" text="Title" />
+                        <Label layoutX="55.0" layoutY="114.0" text="Year" />
+                        <Button fx:id="searchNewMovieButton" layoutX="124.0" layoutY="224.0" mnemonicParsing="false" onAction="#searchMovie" text="Search" />
+                        <Button fx:id="searchClearButton" layoutX="274.0" layoutY="224.0" mnemonicParsing="false" onAction="#cleanSearchFields" text="Clean fields" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="showMoviesTab" closable="false" text="Show watched movies">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="37.0" layoutY="31.0" text="Filters" />
+                        <Label layoutX="55.0" layoutY="65.0" text="Title contains" />
+                        <TextField fx:id="showTitleTextField" layoutX="146.0" layoutY="61.0" prefHeight="25.0" prefWidth="391.0" />
+                        <TextField fx:id="showDirectorTextField" layoutX="146.0" layoutY="112.0" prefHeight="25.0" prefWidth="324.0" />
+                        <TextField fx:id="showStarsTextField" layoutX="146.0" layoutY="161.0" prefHeight="25.0" prefWidth="324.0" />
+                        <Button fx:id="showMoviesButton" layoutX="146.0" layoutY="317.0" mnemonicParsing="false" onAction="#showMovies" text="Show movies" />
+                        <Button fx:id="showClearButton" layoutX="291.0" layoutY="317.0" mnemonicParsing="false" onAction="#cleanShowFields" text="Clean fields" />
+                        <Label layoutX="55.0" layoutY="116.0" text="Director" />
+                        <Label layoutX="55.0" layoutY="165.0" text="Actor" />
+                        <Label layoutX="55.0" layoutY="217.0" text="Watched " />
+                        <Label layoutX="334.0" layoutY="218.0" text="to" />
+                        <Label layoutX="54.0" layoutY="268.0" text="My evalution" />
+                        <DatePicker fx:id="showFromDatePicker" layoutX="145.0" layoutY="214.0" />
+                        <DatePicker fx:id="showToDatePicker" layoutX="363.0" layoutY="213.0" />
+                        <Pane fx:id="showEvaluationPane" layoutX="145.0" layoutY="259.0" minWidth="-Infinity" prefHeight="34.0" prefWidth="396.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

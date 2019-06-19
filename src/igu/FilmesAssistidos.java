@@ -20,12 +20,10 @@ public class FilmesAssistidos extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        MovieLog.LOG.entering("Application", "start");
         Parent root = FXMLLoader.load(getClass().getResource("FXMLfilmes.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
-        MovieLog.LOG.exiting("Application", "start");
     }
 
     public static void main(String[] args) {

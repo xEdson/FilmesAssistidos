@@ -14,12 +14,12 @@ import java.util.logging.Logger;
  * @author ricarte at ft.unicamp.br
  */
 public class MovieLog {
-    public static final Logger LOG = Logger.getLogger("SI405-Logger");
+    public static final Logger LOG = Logger.getLogger("WatchedMovies");
 
     public static void initialize() {
         FileHandler logHandler;
         try {
-            logHandler = new FileHandler("%h/SI405-Log-Atividade3-%u.log");
+            logHandler = new FileHandler("%h/WatchedMovies-%u.log");
             LOG.addHandler(logHandler);
             LOG.setLevel(Level.FINER);
         } catch (IOException | SecurityException ex) {
